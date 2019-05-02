@@ -21,7 +21,7 @@ class Viable_Blog_Woocommerce {
 	 */
 	public function __construct() {
 		add_action( 'init', array( $this, 'remove_breadcrumbs' ), 10 );
-		add_action( 'after_setup_theme', array( $this, 'setup' ), 10 );		
+		add_action( 'after_setup_theme', array( $this, 'setup' ), 20 );		
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 10 );
 
 		add_filter( 'body_class', array( $this, 'active_body_class' ), 10, 1 );
@@ -106,4 +106,6 @@ class Viable_Blog_Woocommerce {
 	function remove_breadcrumbs() {
 	    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 	}
-}
+} 
+
+new Viable_Blog_Woocommerce();

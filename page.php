@@ -28,10 +28,12 @@ get_header();
             	<?php
             	$container_class = viable_blog_post_page_container_class();                
                     
-                if( class_exists( 'Woocommerce' ) && ( is_shop() || is_cart() || is_account_page() || is_checkout() || is_woocommerce() ) ) {
-                    $sidebar_position = get_theme_mod( 'viable_blog_woocommerce_sidebar_position', 'right' );
-                    if( $sidebar_position === 'left' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-                        viable_blog_get_woocommerce_sidebar();
+                if( class_exists( 'Woocommerce' ) ) {
+                    if( is_shop() || is_cart() || is_account_page() || is_checkout() || is_woocommerce() ) {
+                        $sidebar_position = get_theme_mod( 'viable_blog_woocommerce_sidebar_position', 'right' );
+                        if( $sidebar_position === 'left' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+                            viable_blog_get_woocommerce_sidebar();
+                        }
                     }
                 } else {
                     $sidebar_position = get_theme_mod( 'viable_blog_global_sidebar_position', 'right' );
@@ -60,10 +62,12 @@ get_header();
                     </div><!-- #primary.content-area -->
                 </div>
                 <?php
-                if( class_exists( 'Woocommerce' ) && ( is_shop() || is_cart() || is_account_page() || is_checkout() || is_woocommerce() ) ) {
-                    $sidebar_position = get_theme_mod( 'viable_blog_woocommerce_sidebar_position', 'right' );
-                    if( $sidebar_position === 'right' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-                        viable_blog_get_woocommerce_sidebar();
+                if( class_exists( 'Woocommerce' ) ) {
+                    if( is_shop() || is_cart() || is_account_page() || is_checkout() || is_woocommerce() ) {
+                        $sidebar_position = get_theme_mod( 'viable_blog_woocommerce_sidebar_position', 'right' );
+                        if( $sidebar_position == 'right' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+                            viable_blog_get_woocommerce_sidebar();
+                        }
                     }
                 } else {
                     $sidebar_position = get_theme_mod( 'viable_blog_global_sidebar_position', 'right' );

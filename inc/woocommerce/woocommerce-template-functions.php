@@ -115,7 +115,7 @@ if ( ! function_exists( 'viable_blog_woocommerce_wrapper_before' ) ) {
                             	<?php
 	}
 }
-add_action( 'woocommerce_before_main_content', 'viable_blog_woocommerce_wrapper_before' );
+add_action( 'woocommerce_before_main_content', 'viable_blog_woocommerce_wrapper_before', 20 );
 
 if ( ! function_exists( 'viable_blog_woocommerce_wrapper_after' ) ) {
 	/**
@@ -142,7 +142,7 @@ if ( ! function_exists( 'viable_blog_woocommerce_wrapper_after' ) ) {
 		<?php
 	}
 }
-add_action( 'woocommerce_after_main_content', 'viable_blog_woocommerce_wrapper_after' );
+add_action( 'woocommerce_after_main_content', 'viable_blog_woocommerce_wrapper_after', 20 );
 
 /**
  * Sample implementation of the WooCommerce Mini Cart.
