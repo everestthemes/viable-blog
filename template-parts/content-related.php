@@ -38,6 +38,7 @@ if ( $current_object instanceof WP_Post ) {
 					'field'    => 'term_id',
 					'terms'    => $categories,
 					'operator' => 'IN',
+					'include_children' => false,
 					)
 				);
 		}
