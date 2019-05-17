@@ -28,11 +28,6 @@ $enable_social_links = get_theme_mod( 'viable_blog_enable_footer_social_links', 
                         <li><a href="<?php echo esc_url( $twitter_link ); ?>"><i class="fa fa-twitter" aria-hidden="true"></i> <?php esc_html_e( 'Twitter', 'viable-blog' ); ?></a></li>
                         <?php endif; ?>
                     	<?php 
-                        $googleplus_link = get_theme_mod( 'viable_blog_google_plus_link', '' );
-                        if( !empty( $googleplus_link ) ) : ?>
-                        <li><a href="<?php echo esc_url( $googleplus_link ); ?>"><i class="fa fa-google-plus" aria-hidden="true"></i> <?php esc_html_e( 'Google +', 'viable-blog' ); ?></a></li>
-                        <?php endif; ?>
-                    	<?php 
                         $pinterest_link = get_theme_mod( 'viable_blog_pinterest_link', '' );
                         if( !empty( $pinterest_link ) ) : ?>
                         <li><a href="<?php echo esc_url( $pinterest_link ); ?>"><i class="fa fa-pinterest" aria-hidden="true"></i> <?php esc_html_e( 'Pinterest', 'viable-blog' ); ?></a></li>

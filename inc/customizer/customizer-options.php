@@ -205,18 +205,6 @@ $wp_customize->add_control( 'viable_blog_twitter_link', array(
 	'type'				=> 'url',
 ) );
 
-// Option - Google Plus Link
-$wp_customize->add_setting( 'viable_blog_google_plus_link', array(
-	'sanitize_callback'	=> 'esc_url_raw',
-	'default'			=> '',
-) );
-
-$wp_customize->add_control( 'viable_blog_google_plus_link', array(
-	'label'				=> esc_html__( 'Google Plus Link', 'viable-blog' ),
-	'section'			=> 'viable_blog_social_link_options',
-	'type'				=> 'url',
-) );
-
 // Option - Pinterest Link
 $wp_customize->add_setting( 'viable_blog_pinterest_link', array(
 	'sanitize_callback'	=> 'esc_url_raw',
