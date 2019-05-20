@@ -29,15 +29,15 @@ get_header();
             	$container_class = viable_blog_post_page_container_class();                
                     
                 if( class_exists( 'Woocommerce' ) ) {
-                    if( is_shop() || is_cart() || is_account_page() || is_checkout() || is_woocommerce() ) {
+                    if( is_shop() || is_cart() || is_account_page() || is_checkout() ) {
                         $sidebar_position = get_theme_mod( 'viable_blog_woocommerce_sidebar_position', 'right' );
-                        if( $sidebar_position === 'left' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+                        if( $sidebar_position == 'left' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
                             viable_blog_get_woocommerce_sidebar();
                         }
                     }
                 } else {
                     $sidebar_position = get_theme_mod( 'viable_blog_global_sidebar_position', 'right' );
-                    if( $sidebar_position === 'left' && is_active_sidebar( 'sidebar' )) {
+                    if( $sidebar_position == 'left' && is_active_sidebar( 'sidebar' )) {
                         get_sidebar();
                     }
                 }
@@ -63,7 +63,7 @@ get_header();
                 </div>
                 <?php
                 if( class_exists( 'Woocommerce' ) ) {
-                    if( is_shop() || is_cart() || is_account_page() || is_checkout() || is_woocommerce() ) {
+                    if( is_shop() || is_cart() || is_account_page() || is_checkout() ) {
                         $sidebar_position = get_theme_mod( 'viable_blog_woocommerce_sidebar_position', 'right' );
                         if( $sidebar_position == 'right' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
                             viable_blog_get_woocommerce_sidebar();
@@ -71,7 +71,7 @@ get_header();
                     }
                 } else {
                     $sidebar_position = get_theme_mod( 'viable_blog_global_sidebar_position', 'right' );
-                    if( $sidebar_position === 'right' && is_active_sidebar( 'sidebar' )) {
+                    if( $sidebar_position == 'right' && is_active_sidebar( 'sidebar' )) {
                         get_sidebar();
                     }
                 }
