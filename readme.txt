@@ -5,7 +5,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 
 Requires at least: 4.9.0
 Tested up to: 5.0.3
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,9 +75,13 @@ Viable Blog is distributed under the terms of the GNU GPL
 
 == Changelogs ==
 
+= v1.0.7 - May 25, 2019 =
+
+- woocommerce Sidebar issue on page single fixed
+
 = v1.0.6 - January 14, 2019 =
 
-- Sidebar issue on post and page single fixed 
+- Sidebar issue on post and page single fixed
 
 
 = v1.0.5 - August 19, 2018 =
