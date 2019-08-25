@@ -8,7 +8,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Team: Everestthemes.com <contact@everestthemes.com>\n"
 "Last-Translator: Everestthemes <contact@everestthemes.com>\n"
-"Report-Msgid-Bugs-To: https://everestthemes.com/support/\n"
+"Report-Msgid-Bugs-To: https://everestthemes.com/support-forum/\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Woocommerce Sidebar"
 msgstr ""
 
-#: header.php:25
+#: header.php:30
 msgid "Skip to content"
 msgstr ""
 

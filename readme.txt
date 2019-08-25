@@ -2,10 +2,10 @@
 
 Contributors: everestthemes
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout, custom-header
-
+Requires PHP: 5.6
 Requires at least: 4.9.0
-Tested up to: 5.0.3
-Stable tag: 1.0.7
+Tested up to: 5.2.2
+Stable tag: 1.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,15 @@ Viable Blog is distributed under the terms of the GNU GPL
 
 
 == Changelogs ==
+
+= v1.0.8 - August 25, 2019 =
+
+- Required php version updated to 5.6
+- Tested upto 5.2.2 WordPress version
+- Added wp_body_open function
+- Added recommendation for Contact Form by WPForms
+- Updated language file
+- Changed site title markup to span
 
 = v1.0.7 - May 25, 2019 =
 
