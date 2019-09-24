@@ -175,7 +175,7 @@ if ( ! function_exists( 'viable_blog_recommended_plugins' ) ) :
                 'required' => false,
             ),
             array(
-                'name'     => esc_html__( 'Contact Form by WPForms – Drag & Drop Form Builder for WordPress', 'mocho-blog' ),
+                'name'     => esc_html__( 'Contact Form by WPForms : Drag & Drop Form Builder for WordPress', 'viable-blog' ),
                 'slug'     => 'wpforms-lite',
                 'required' => false,
             ),
