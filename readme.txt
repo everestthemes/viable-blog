@@ -4,8 +4,8 @@ Contributors: everestthemes
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout, custom-header
 Requires PHP: 5.6
 Requires at least: 4.9.0
-Tested up to: 5.2.3
-Stable tag: 1.0.9
+Tested up to: 5.3.2
+Stable tag: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,10 @@ Viable Blog is distributed under the terms of the GNU GPL
 
 
 == Changelogs ==
+
+= v1.1.0 - January 5, 2020 =
+
+- Google Structured Data fixed
 
 = v1.0.9 - September 24, 2019 =
 
