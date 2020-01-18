@@ -163,12 +163,7 @@ if( !function_exists( 'viable_blog_breadcrumb_action' ) ) {
         $enable_breadcrumb = get_theme_mod( 'viable_blog_enable_breadcrumb', 0 );
         ?>
         <div class="vb_breadcrumb breadtrails_style3">
-            <?php
-                $breadcrumb_args = array(
-                    'show_browse' => false,
-                );
-                viable_blog_breadcrumb_trail( $breadcrumb_args );
-            ?>
+            <?php everestthemes_breadcrumb_trail(); ?>
         </div><!-- .vb_breadcrumb.breadtrails_style3 -->
         <?php
     }
