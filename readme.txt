@@ -5,7 +5,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Requires PHP: 5.6
 Requires at least: 4.9.0
 Tested up to: 5.3.2
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,13 +75,20 @@ Viable Blog is distributed under the terms of the GNU GPL
 
 == Changelogs ==
 
+= v1.1.1 - January 18, 2020 =
+
+- Fixed Breadcrumb issue
+
+
 = v1.1.0 - January 5, 2020 =
 
 - Google Structured Data fixed
 
+
 = v1.0.9 - September 24, 2019 =
 
 - site title css added 
+
 
 = v1.0.8 - August 25, 2019 =
 
@@ -92,9 +99,11 @@ Viable Blog is distributed under the terms of the GNU GPL
 - Updated language file
 - Changed site title markup to span
 
+
 = v1.0.7 - May 25, 2019 =
 
 - woocommerce Sidebar issue on page single fixed
+
 
 = v1.0.6 - January 14, 2019 =
 
@@ -112,11 +121,9 @@ Viable Blog is distributed under the terms of the GNU GPL
 - Support for woocommerce
 
 
-
 = v1.0.3 - August 18, 2018 =
 
 - Upgrade to pro link added
-
 
 
 = v1.0.2 - July 23, 2018 =
@@ -124,13 +131,10 @@ Viable Blog is distributed under the terms of the GNU GPL
 - Fix: Proper escaping
 
 
-
 = v1.0.1 - July 22, 2018 =
 
 - Proper escaping done.
 - Unwanted tags are removed and needed tags are included.
-
-
 
 
 = v1.0.0 - July 9, 2018 =
