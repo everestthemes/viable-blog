@@ -4,8 +4,8 @@ Contributors: everestthemes
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, grid-layout, custom-header
 Requires PHP: 5.6
 Requires at least: 4.9.0
-Tested up to: 5.3.2
-Stable tag: 1.1.1
+Tested up to: 5.7
+Stable tag: 1.1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -74,6 +74,10 @@ Viable Blog is distributed under the terms of the GNU GPL
 
 
 == Changelogs ==
+
+= v1.1.2 - May 17, 2021 =
+
+- Compatibility check for WordPress 5.7
 
 = v1.1.1 - January 18, 2020 =
 
