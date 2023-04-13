@@ -40,7 +40,8 @@ if( class_exists( 'WP_Customize_Control' ) ) {
                     <?php
                     foreach ( $this->choices as $value => $label ){
                         $selected = '';
-                        if( in_array( $value, $this->value() ) ){
+                        $_value = $this->value();
+                        if( is_array( $_value ) && in_array( $value, $_value() ) ){
                             $selected = 'selected="selected"';
                         }
                         echo '<option value="' . esc_attr( $value ) . '"' . esc_attr( $selected ) . '>' . esc_html( $label ) . '</option>';
