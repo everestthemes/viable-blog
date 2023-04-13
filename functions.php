@@ -88,6 +88,8 @@ if ( ! function_exists( 'viable_blog_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		remove_theme_support( 'widgets-block-editor' );
 	}
 endif;
 add_action( 'after_setup_theme', 'viable_blog_setup' );
