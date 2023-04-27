@@ -75,7 +75,7 @@ Viable Blog is distributed under the terms of the GNU GPL
 
 == Changelogs ==
 
-= v1.4.5 - April 27, 2023 =
+= v1.1.5 - April 27, 2023 =
 - fixed security issues
 
 = v1.1.4 - April 12, 2023 =
