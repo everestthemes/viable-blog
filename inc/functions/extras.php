@@ -149,7 +149,7 @@ if( !function_exists( 'viable_blog_search_form' ) ) :
      * @since 1.0.0
      */
     function viable_blog_search_form() {
-        $form = '<form role="search" method="get" id="search-form" class="clearfix" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type Something', 'viable-blog' ) . '" value"' . esc_attr__(get_search_query()) . '" ><input type="submit" id="submit" value="'. esc_attr__( 'Search', 'viable-blog' ).'"></form>';
+        $form = '<form role="search" method="get" id="search-form" class="clearfix" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type Something', 'viable-blog' ) . '" value"' . esc_attr(get_search_query()) . '" ><input type="submit" id="submit" value="'. esc_attr__( 'Search', 'viable-blog' ).'"></form>';
 
         return $form;
     }

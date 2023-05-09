@@ -267,7 +267,7 @@ class Everestthemes_Breadcrumb_Trail {
 	 */
 	public function trail() {
 
-		echo wp_kses_post( $this->get_trail() );
+		echo esc_html( $this->get_trail() );
 	}
 
 	/* ====== Protected Methods ====== */
@@ -892,7 +892,7 @@ class Everestthemes_Breadcrumb_Trail {
 	protected function add_search_items() {
 
 		if ( is_paged() || true === $this->args['show_title'] )
-			$this->items[] = sprintf( '<a href="%s">%s%s</a>', esc_url( get_search_link() ), '<span class="breadcrumb-search">'. $this->labels['search'] .'</span>', ' &#8220;'. esc_attr__(get_search_query()) .'&#8221;' );
+			$this->items[] = sprintf( '<a href="%s">%s%s</a>', esc_url( get_search_link() ), '<span class="breadcrumb-search">'. $this->labels['search'] .'</span>', ' &#8220;'. esc_attr(get_search_query()) .'&#8221;' );
 	}
 
 	/**
