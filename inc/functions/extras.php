@@ -10,38 +10,38 @@
  */
 if ( !function_exists( 'viable_blog_fonts_url' ) ) :
 
-    /**
-     * Return Font's URL.
-     *
-     * @since 1.0.0
-     * @return string Fonts URL.
-     */
-    function viable_blog_fonts_url()
-    {
+	/**
+	 * Return Font's URL.
+	 *
+	 * @since 1.0.0
+	 * @return string Fonts URL.
+	 */
+	function viable_blog_fonts_url()
+	{
 
-        $fonts_url = '';
-        $fonts     = array();
-        $subsets   = 'latin,latin-ext';
+		$fonts_url = '';
+		$fonts     = array();
+		$subsets   = 'latin,latin-ext';
 
-        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Roboto font: on or off', 'viable-blog')) {
-            $fonts[] = 'Roboto:400,400i,500,500i,700,700i';
-        }
-        
-        /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Muli font: on or off', 'viable-blog')) {
-            $fonts[] = 'Muli:400,500,600,700';
-        }
+		/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+		if ('off' !== _x('on', 'Roboto font: on or off', 'viable-blog')) {
+			$fonts[] = 'Roboto:400,400i,500,500i,700,700i';
+		}
+		
+		/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+		if ('off' !== _x('on', 'Muli font: on or off', 'viable-blog')) {
+			$fonts[] = 'Muli:400,500,600,700';
+		}
 
-        if ( $fonts ) {
-            $fonts_url = add_query_arg( array(
-                'family' => urlencode( implode( '|', $fonts ) ),
-                'subset' => urlencode( $subsets ),
-            ), '//fonts.googleapis.com/css' );
-        }
+		if ( $fonts ) {
+			$fonts_url = add_query_arg( array(
+				'family' => urlencode( implode( '|', $fonts ) ),
+				'subset' => urlencode( $subsets ),
+			), '//fonts.googleapis.com/css' );
+		}
 
-        return $fonts_url;
-    }
+		return $fonts_url;
+	}
 endif;
 
 /**
@@ -49,18 +49,18 @@ endif;
  */
 if ( !function_exists( 'viable_blog_navigation_fallback' ) ) :
 
-    function viable_blog_navigation_fallback() {
-        ?>
-        <ul>
-            <?php 
-                wp_list_pages( array( 
-                    'title_li' => '', 
-                    'depth' => 1,
-                ) ); 
-            ?>
-        </ul>
-        <?php    
-    }
+	function viable_blog_navigation_fallback() {
+		?>
+		<ul>
+			<?php 
+				wp_list_pages( array( 
+					'title_li' => '', 
+					'depth' => 1,
+				) ); 
+			?>
+		</ul>
+		<?php    
+	}
 
 endif;
 
@@ -69,28 +69,28 @@ endif;
  */
 if( !function_exists( 'viable_blog_banner_posts_query' ) ) {
 
-    function viable_blog_banner_posts_query() {
+	function viable_blog_banner_posts_query() {
 
-        $banner_categories = get_theme_mod( 'viable_blog_banner_posts_categories', '' );
-        
-        $banner_posts_no = get_theme_mod( 'viable_blog_banner_posts_no', 5 );
+		$banner_categories = get_theme_mod( 'viable_blog_banner_posts_categories', '' );
+		
+		$banner_posts_no = get_theme_mod( 'viable_blog_banner_posts_no', 5 );
 
-        $banner_args = array(
-            'post_type' => 'post',
-        );
+		$banner_args = array(
+			'post_type' => 'post',
+		);
 
-        if( !empty( $banner_categories ) ) {
-            $banner_args['cat'] = $banner_categories;
-        }
+		if( !empty( $banner_categories ) ) {
+			$banner_args['cat'] = $banner_categories;
+		}
 
-        if( !empty( $banner_posts_no ) ) {
-            $banner_args['posts_per_page'] = absint( $banner_posts_no );
-        }
+		if( !empty( $banner_posts_no ) ) {
+			$banner_args['posts_per_page'] = absint( $banner_posts_no );
+		}
 
-        $banner_query = new WP_Query( $banner_args );
+		$banner_query = new WP_Query( $banner_args );
 
-        return $banner_query;
-    }
+		return $banner_query;
+	}
 
 }
 
@@ -99,41 +99,41 @@ if( !function_exists( 'viable_blog_banner_posts_query' ) ) {
  *
  */
 if( !function_exists( 'viable_blog_excerpt_more' ) ) :
-    /*
-     * Excerpt More
-     */
-    function viable_blog_excerpt_more( $more ) {
+	/*
+	 * Excerpt More
+	 */
+	function viable_blog_excerpt_more( $more ) {
 
-        if ( is_admin() ) {
-            return $more;
-        }
+		if ( is_admin() ) {
+			return $more;
+		}
 
-        return '..';
+		return '..';
 
-    }
+	}
 endif;
 add_filter( 'excerpt_more', 'viable_blog_excerpt_more' );
 
 
 if( !function_exists( 'viable_blog_excerpt_length' ) ) :
-    /*
-     * Excerpt More
-     */
-    function viable_blog_excerpt_length( $length ) {
+	/*
+	 * Excerpt More
+	 */
+	function viable_blog_excerpt_length( $length ) {
 
-        if( is_admin() ) {
-            return $length;
-        }
+		if( is_admin() ) {
+			return $length;
+		}
 
-        $excerpt_length = get_theme_mod( 'viable_blog_excerpt_length', 20 );
+		$excerpt_length = get_theme_mod( 'viable_blog_excerpt_length', 20 );
 
-        if ( absint( $excerpt_length ) > 0 ) {
-            $excerpt_length = absint( $excerpt_length );
-        }
+		if ( absint( $excerpt_length ) > 0 ) {
+			$excerpt_length = absint( $excerpt_length );
+		}
 
-        return $excerpt_length;
+		return $excerpt_length;
 
-    }
+	}
 endif;
 add_filter( 'excerpt_length', 'viable_blog_excerpt_length' );
 
@@ -143,16 +143,16 @@ add_filter( 'excerpt_length', 'viable_blog_excerpt_length' );
  *
  */
 if( !function_exists( 'viable_blog_search_form' ) ) :
-    /**
-     * Search form of the theme.
-     *
-     * @since 1.0.0
-     */
-    function viable_blog_search_form() {
-        $form = '<form role="search" method="get" id="search-form" class="clearfix" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type Something', 'viable-blog' ) . '" value"' . get_search_query() . '" ><input type="submit" id="submit" value="'. esc_attr__( 'Search', 'viable-blog' ).'"></form>';
+	/**
+	 * Search form of the theme.
+	 *
+	 * @since 1.0.0
+	 */
+	function viable_blog_search_form() {
+		$form = '<form role="search" method="get" id="search-form" class="clearfix" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type Something', 'viable-blog' ) . '" value="' . get_search_query() . '" ><input type="submit" id="submit" value="'. esc_attr__( 'Search', 'viable-blog' ).'"></form>';
 
-        return $form;
-    }
+		return $form;
+	}
 endif;
 add_filter( 'get_search_form', 'viable_blog_search_form', 10 );
 
@@ -161,29 +161,29 @@ add_filter( 'get_search_form', 'viable_blog_search_form', 10 );
  * Hook - Plugin Recommendation
  */
 if ( ! function_exists( 'viable_blog_recommended_plugins' ) ) :
-    /**
-     * Recommend plugins.
-     *
-     * @since 1.0.0
-     */
-    function viable_blog_recommended_plugins() {
+	/**
+	 * Recommend plugins.
+	 *
+	 * @since 1.0.0
+	 */
+	function viable_blog_recommended_plugins() {
 
-        $plugins = array(
-            array(
-                'name'     => esc_html__( 'Everest Toolkit', 'viable-blog' ),
-                'slug'     => 'everest-toolkit',
-                'required' => false,
-            ),
-            array(
-                'name'     => esc_html__( 'Contact Form by WPForms : Drag & Drop Form Builder for WordPress', 'viable-blog' ),
-                'slug'     => 'wpforms-lite',
-                'required' => false,
-            ),
-        );
+		$plugins = array(
+			array(
+				'name'     => esc_html__( 'Everest Toolkit', 'viable-blog' ),
+				'slug'     => 'everest-toolkit',
+				'required' => false,
+			),
+			array(
+				'name'     => esc_html__( 'Contact Form by WPForms : Drag & Drop Form Builder for WordPress', 'viable-blog' ),
+				'slug'     => 'wpforms-lite',
+				'required' => false,
+			),
+		);
 
-        tgmpa( $plugins );
+		tgmpa( $plugins );
 
-    }
+	}
 
 endif;
 add_action( 'tgmpa_register', 'viable_blog_recommended_plugins' );
